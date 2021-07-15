@@ -16,9 +16,8 @@ function Pick(set,n) {
         }
         function pick(set, n) { return new Pick(set,n); }
 
-
-
-PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Master/")
+    PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Ibex_MA_Reg/")
+// PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Master/")    ~OLD HOST~
     //PennController.DebugOff() // use for the final version
     PennController.Sequence( "welcome",
     "instructions",
@@ -817,7 +816,7 @@ PennController("instructions",
 // PRACTICE ITEMS
 //******************************************************************************************************************************************
 
-PennController.Template( PennController.GetTable("master_spr1_short.csv")
+PennController.Template( PennController.GetTable("master_spr1_short.csv")  // ~ ALTER THE FILE AS NECESSARY ~
                          .filter("type" , "practice")
                          ,  
                          variable => ["practice",
@@ -1080,7 +1079,7 @@ PennController( "end_practice" ,
 //******************************************************************************************************************************************
 
 
-PennController.Template( PennController.GetTable("master_spr1_short.csv")
+PennController.Template( PennController.GetTable("master_spr1_short.csv")  // ~ ALTER THE FILE AS NECESSARY ~
                          .filter("type" , (/^(critical|filler)$/))
                          ,  
                          variable => ["experiment_trial",
